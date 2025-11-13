@@ -7,7 +7,7 @@ import { Product } from '@/types';
 
 const Homepage = async () => {
   const latestProducts = await getLatestProducts();
-  const products: Product[] = latestProducts.map((product) => ({
+  const products: Product[] = latestProducts.map((product: Product) => ({
     ...product,
     price: product.price.toString(),
     rating: product.rating.toString(),
